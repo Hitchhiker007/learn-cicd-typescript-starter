@@ -20,3 +20,5 @@ test('missing key after ApiKey', () => {
   const headers = { authorization: "ApiKey" };
   expect(getAPIKey(headers)).toBe(null);
 });
+
+//
