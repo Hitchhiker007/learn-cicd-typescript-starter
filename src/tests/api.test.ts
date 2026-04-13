@@ -20,8 +20,3 @@ test('missing key after ApiKey', () => {
   const headers = { authorization: "ApiKey" };
   expect(getAPIKey(headers)).toBe(null);
 });
-
-// test('valid api key', () => {
-//   const headers = { authorization: "ApiKey myapikey123" };
-//   expect(getAPIKey(headers)).toBe("wrongkey");
-// });
