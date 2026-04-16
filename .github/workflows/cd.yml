@@ -34,3 +34,6 @@ jobs:
 
       - name: "Build and push Docker image"
         run: "gcloud builds submit --tag australia-southeast2-docker.pkg.dev/notely-493404/notely-ar-repo/notely:latest ."
+
+      - name: "Deploy notely to G Cloud run"
+        run: "gcloud run deploy notely --image australia-southeast2-docker.pkg.dev/notely-493404/notely-ar-repo/notely:latest --region australia-southeast2 --allow-unauthenticated --project notely-493404 --max-instances=4"
